@@ -1,0 +1,27 @@
+= 1.0.7 =
+* Hero left-right spacing issues fixed.
+* Widget tag style issues fixed.
+
+= 1.0.6 =
+* Style issues fixed.
+* Improved some elements.
+* Improved featured link section.
+* Swiper JS updated.
+
+= 1.0.5 =
+* Added WeChat, QQ, Bilibili and Threads social icons.
+
+= 1.0.4 =
+* RTL & various issue fixed.
+
+= 1.0.3 =
+* Header widget issue fixed.
+
+= 1.0.2 =
+* Search from issue fixed.
+
+= 1.0.1 =
+* Minor issues fixed.
+
+= 1.0.0 =
+* Initial release 🚀

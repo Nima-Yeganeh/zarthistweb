@@ -1,0 +1,226 @@
+#toplevel_page_gspeech .wp-submenu li:last-child a {
+    color: #d3a3f8 !important;
+}
+.gspeech-plugin-gopro {
+	color: #571891 !important;
+    font-weight: bold;
+}
+
+.gsp_modal_header {
+	background-color: #ededed;
+	border-bottom: 1px solid #892bcb52;
+	padding: 15px 0 15px 40px;
+}
+.gsp_modal_footer {
+	background-color: #ededed;
+	border-top: 1px solid #c2c2c2;
+	padding: 20px 25px 20px 25px;
+	position: relative;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.gsp_modal_header h4 {
+	text-transform: uppercase;
+    font-size: 15px;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #610f97;
+    position: relative;
+}
+.gsp_modal_logo {
+	border-radius: 3px;
+    position: absolute;
+    width: 20px;
+    height: 19px;
+    left: 14px;
+    top: 15px;
+    background-color: #4d077c;
+    background-image: url(../images/g_logo_small.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gsp_modal_body {
+	padding: 0 25px;
+}
+.gsp_modal_body_inner h3 {
+	margin-top: 25px;
+	margin-bottom: 19px;
+	line-height: 21px;
+	color: #111;
+	font-size: 16px;
+}
+
+.gsp_reasons_list {
+	list-style: none;
+	margin-bottom: 20px;
+}
+.gsp_reasons_list li {
+	margin-bottom: 9px;
+}
+
+.gsp_reason_group {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.gsp_reason_group input {
+	flex-shrink: 0;
+}
+.gsp_reason_group label {
+	color: #2f2f2f;
+    font-size: 13px;
+    margin-left: 7px;
+    transform: translateY(-2px);
+}
+
+.gsp_button {
+	width: 160px;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	border: none;
+    padding: 0px;
+    color: #333;
+    transition: all 400ms cubic-bezier(0.39, 0.575, 0.565, 1);
+    text-decoration: none;
+    cursor: pointer;
+}
+.gsp_button:hover {
+	color: #333;
+	transform: scale(1.05,1.05);
+}
+.gsp_button_submit_deactivate {
+	background-color: #682296;
+    text-shadow: 0 1px 2px #000000b8;
+    color: #fff;
+}
+.gsp_button_submit_deactivate:hover {
+	background-color: #8227bd;
+	color: #fff;
+}
+.gsp_button_skip_deactivate {
+	background-color: #fbfafa;
+}
+.gsp_button_skip_deactivate:hover {
+	background-color: #c8c8c8;
+}
+
+.gsp_vis {
+	display: block !important;
+}
+.gsp_hidden {
+	display: none !important;
+}
+
+/*gsp dialog*/
+.gsp_dialog_overlay {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100001;
+    background-color: rgb(0 0 0 / 80%);
+    opacity: 0;
+    display: none !important;
+    transition: all 600ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.gsp_dialog_overlay.gsp_vis {
+	display: block !important;
+}
+.gsp_dialog_overlay.gsp_op_1 {
+	opacity: 1;
+}
+
+.gsp_ldg_wrapper {
+	border-radius: 5px;
+    position: absolute;
+    background-color: #0000009e;
+    width: 160px;
+    height: 34px;
+    left: 25px;
+    top: 20px;
+}
+.gsp_ldg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    animation: gsp_rotating 1.6s linear infinite;
+}
+.gsp_ldg svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.gsp_modal_wrapper {
+	display: none;
+	box-sizing: border-box;
+	position: fixed;
+	left: 50%;
+	top: 100px;
+	z-index: 100002;
+	transform: translateX(-50%);
+	width: 596px;
+	background-color: #fff;
+	min-height: 50px;
+	border-radius: 7px;
+	overflow: hidden;
+	box-shadow: 0 0 2px 1px rgb(0 0 0 / 20%);
+	opacity: 0;
+	transition: all 600ms cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.gsp_modal_wrapper.gsp_op_1 {
+	opacity: 1;
+}
+
+.gsp_checked .gsp_reason_input {
+	display: block;
+}
+.gsp_reason_input {
+	margin-top: 10px;
+	display: none;
+
+}
+.gsp_reason_input input,
+.gsp_reason_input textarea {
+	width: 100%;
+}
+.gsp_reason_input input:focus,
+.gsp_reason_input textarea:focus,
+.gsp_reason_input input:hover,
+.gsp_reason_input textarea:hover,
+.gsp_reason_input input:active,
+.gsp_reason_input textarea:active {
+	border: 1px solid #e781f9;
+	outline: none;
+	box-shadow: none;
+}
+
+
+
+
+@media (max-width: 650px) {
+    .gsp_modal_wrapper {
+        box-sizing: border-box;
+        width: 100%;
+    }
+}
+
+@keyframes gsp_rotating {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}

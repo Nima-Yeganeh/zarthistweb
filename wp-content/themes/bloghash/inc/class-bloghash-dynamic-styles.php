@@ -196,6 +196,7 @@ if ( ! class_exists( 'Bloghash_Dynamic_Styles' ) ) :
 							[data-darkmode=dark] .bloghash-post-item .bloghash-post-content .bloghash-btn,
 							[data-darkmode=dark] .wp-block-search .wp-block-search__button {
 								--bloghash-white: #fff;
+								--bloghash-secondary: #000;
 							}
 							[data-darkmode=dark] .bloghash-btn.btn-white.btn-outline:hover,
 							[data-darkmode=dark] .using-keyboard .bloghash-btn.btn-white.btn-outline:focus {

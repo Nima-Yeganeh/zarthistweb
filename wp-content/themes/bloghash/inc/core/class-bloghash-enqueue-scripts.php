@@ -159,6 +159,7 @@ class Bloghash_Enqueue_Scripts {
 			'no_results'            	=> esc_html__( 'No results found', 'bloghash' ),
 			'more_results'          	=> esc_html__( 'More results', 'bloghash' ),
 			'responsive-breakpoint' 	=> intval( bloghash_option( 'main_nav_mobile_breakpoint' ) ),
+			'dark_mode' 				=> (bool) bloghash_option( 'dark_mode' ),
 			'sticky-header'         	=> array(
 				'enabled' => bloghash_option( 'sticky_header' ),
 				'hide_on' => bloghash_option( 'sticky_header_hide_on' ),

@@ -1595,16 +1595,30 @@ var bloghashTriggerEvent = function( el, typeArg ) {
 	})();
 	
 	/****** // Start --> Dark / Light Mode Setup // ******/
-	document.querySelectorAll('.bloghash-darkmode').forEach((toggle) => {
-		const darkMode = localStorage.getItem('darkmode') === 'dark';
-		document.documentElement.setAttribute('data-darkmode', darkMode ? 'dark' : 'light');
-		if (darkMode) toggle.classList.add('active');		
-		toggle.addEventListener('click', () => {
-		  const isActive = toggle.classList.contains('active');
-		  document.documentElement.setAttribute('data-darkmode', isActive ? 'light' : 'dark');
-		  localStorage.setItem('darkmode', isActive ? 'light' : 'dark');
-		  toggle.classList.toggle('active');
+	document.addEventListener('DOMContentLoaded', function() {
+		const toggleButton = document.querySelector('.bloghash-darkmode');
+	
+		// Initialize dark mode based on customizer setting or local storage
+		let darkModeEnabled = bloghash_vars.dark_mode || localStorage.getItem('darkmode') === 'dark';
+		updateDarkMode(darkModeEnabled);
+	
+		// Toggle button click handler
+		toggleButton.addEventListener('click', function() {
+			darkModeEnabled = !darkModeEnabled; // Toggle dark mode state
+			updateDarkMode(darkModeEnabled); // Update UI and store preference
 		});
+	
+		function updateDarkMode(enabled) {
+			if (enabled) {
+				document.documentElement.setAttribute('data-darkmode', 'dark');
+				localStorage.setItem('darkmode', 'dark');
+				toggleButton.classList.add('active');
+			} else {
+				document.documentElement.setAttribute('data-darkmode', 'light');
+				localStorage.setItem('darkmode', 'light');
+				toggleButton.classList.remove('active');
+			}
+		}
 	});
 
 }() );

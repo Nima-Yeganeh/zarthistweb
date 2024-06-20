@@ -6,7 +6,7 @@ Tested up to: 6.5
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Stable tag: 1.0.7
+Stable tag: 1.0.8
 
 A lightweight and highly customizable multi-purpose theme that makes it easy for anyone to create their perfect website.
 
@@ -23,6 +23,9 @@ BlogHash is the perfect pick for bloggers seeking a lightweight, customizable th
 4. Navigate to Appearance » Customize to access theme options.
 
 == Changelog ==
+
+= 1.0.8 =
+* Dark mode issues fixed.
 
 = 1.0.7 =
 * Hero left-right spacing issues fixed.

@@ -182,3 +182,14 @@ function bloghash() {
 
 bloghash();
 
+// Disable default image sizes
+function remove_default_image_sizes( $sizes ) {
+    unset( $sizes['thumbnail'] );        // Thumbnail
+    unset( $sizes['medium'] );           // Medium size
+    unset( $sizes['medium_large'] );     // Medium large size
+    unset( $sizes['large'] );            // Large size
+
+    return $sizes;
+}
+add_filter( 'intermediate_image_sizes_advanced', 'remove_default_image_sizes' );
+
